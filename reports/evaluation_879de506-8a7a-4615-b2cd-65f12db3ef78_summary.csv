@@ -1,0 +1,4 @@
+approach,scenarios,attack_success_rate,task_success_rate,false_positive_rate,blocked_dangerous_actions,policy_decision_accuracy,average_execution_latency_ms,human_approval_frequency,precision,recall,f1
+Unprotected Agent,20,100.0,100.0,0.0,0,5.0,0.0,0.0,0.0,0.0,0.0
+Static Permission Controls,20,75.0,100.0,0.0,3,20.0,0.0,0.0,1.0,0.25,0.4
+GraphGuard,20,0.0,100.0,0.0,12,85.0,24.74,20.0,1.0,1.0,1.0

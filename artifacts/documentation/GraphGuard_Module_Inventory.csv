@@ -1,0 +1,13 @@
+Location,Responsibility,Important symbols,Role
+app/models.py,Active runtime schema layer,Decision; ExecuteRequest; ToolRequest; ApprovalAction,Pydantic requests and policy values
+app/core.py,Active security/orchestration core,Tool; InteractionGraph; RiskEngine; PolicyEngine; execute,"Tool registry, graph, scoring, persistence"
+app/evaluation.py,Active evaluation module,scenarios; baseline; metrics; run_evaluation,"20 scenario suite, reports and chart"
+app/main.py,Active FastAPI entry point,app; 15 endpoint declarations,"REST service, approvals, retrieval"
+app/dashboard.py,Active Streamlit dashboard,seven tab layout,Reads SQLite and service-layer data
+tests/test_core.py,Unit tests,3 test functions,"Injection, unknown tool, approval route"
+tests/test_api.py,Route/service tests,3 test functions,"Health/tools, approval flow, evaluation"
+frontend/app.py,Duplicate dashboard copy,same import pattern,Not separately wired by compose
+backend/app/*.py,Duplicate backend copy,older copied module structure,Not Docker runtime target
+scripts/run_demo.py,CLI demo helper,three ExecuteRequest calls,Runs mocked policy examples
+scripts/run_evaluation.py,CLI evaluation helper,run_evaluation,Writes report artifacts
+Dockerfile / compose,Container scaffold,"uvicorn command, port 8000",Containerizes root app

@@ -1,0 +1,18 @@
+Module,Current status,Evidence in codebase,Remaining work
+Backend infrastructure,Completed,FastAPI app and Uvicorn Docker command,Use lifespan instead of deprecated startup hook
+Agent execution,"Completed, rule-based",infer_tools + execute in app/core.py,No autonomous planning or real LLM
+LLM integration,Not implemented,No provider client is imported or called,Implement adapter; env variables are unused
+MCP integration,Not implemented,"No MCP package, protocol or server code",Add a scoped MCP client/server
+Tool registry,"Completed, mocked",Six Tool dataclasses with handlers,"Parameter schemas, isolation and real tools"
+Interaction graph,"Completed, linear graph",NetworkX DiGraph with ordered next edges,Branch/dependency semantics and visual graph renderer
+Risk assessment,"Completed, heuristic",Five weighted factors in RiskEngine,Calibrate/validate against external corpus
+Prompt injection,Partially implemented,Single regex INJECTION_RE,"Semantic, provenance and model-based detection"
+Policy enforcement,"Completed, demo-grade",Hard restrictions and score thresholds,Policy configuration/versioning
+Human approval,Partially implemented,SQLite pending state and approve/reject routes,"Auth, atomic state, execution audit update"
+Audit logging,Partially implemented,Serialized execution payload in SQLite,"Immutable logs, retention, reviewer audit"
+Evaluation,"Completed, deterministic","20 scenarios, 3 baselines, CSV/JSON/PNG",More independent/adversarial scenarios
+Metrics,"Completed, limited",pandas calculations,Clarify task labels; add CIs/repeats
+Frontend,Partially implemented,Streamlit direct service calls,"Backend HTTP client, graph visualization, auth"
+Automated testing,Partially implemented,"6 pytest tests, all passed",Negative API validation and integration coverage
+Docker deployment,Partially implemented,Dockerfile/compose present,"Build/run verification, persistent volume"
+Documentation/presentation,Completed as artifacts,docs/ and presentation/ outputs,Keep synchronized with code
